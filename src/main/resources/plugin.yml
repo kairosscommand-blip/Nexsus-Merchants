@@ -1,0 +1,22 @@
+name: NexusMerchants
+version: ${project.version}
+main: com.nexuscraft.nexusmerchants.NexusMerchantsPlugin
+api-version: '1.21'
+author: RealSociety
+description: "A massive overhaul of villager (and wandering trader) trading. Every trade shown is a real, ordinary MerchantRecipe in the real vanilla trading GUI -- nothing here is a custom shop screen. A persistent per-villager price memory makes a specific trade genuinely move against the player the more it's used, easing back down slowly over real time. An individual villager's own quality tier (Standard through Legendary) makes them noticeably better or worse at their job than another villager of the same profession. A per-player, per-villager reputation rewards trading with the same individual repeatedly, not just the same profession. Restocking is visible and predictable, on a real timer, instead of sleep-near-a-lectern-and-hope. A narrow, trade-scoped dialogue layer (greetings, completion lines, restock announcements) is included and can be toggled off independently."
+
+commands:
+  nexusmerchants:
+    description: Reload NexusMerchants' config, or inspect the merchant you're looking at.
+    usage: /nexusmerchants <reload|inspect>
+    aliases: [merchants, nexmerchants]
+    permission: nexusmerchants.use
+    permission-message: "§cYou don't have permission to do that."
+
+permissions:
+  nexusmerchants.admin:
+    description: Reload NexusMerchants' config.
+    default: op
+  nexusmerchants.use:
+    description: Inspect a villager or wandering trader's economic state.
+    default: true
